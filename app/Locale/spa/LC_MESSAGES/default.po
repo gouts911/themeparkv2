@@ -1,0 +1,654 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-10-01 20:08-0400\n"
+"Last-Translator: \n"
+"Language-Team: EMAIL@ADDRESS\n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.4\n"
+
+#: Controller/AreasController.php:44;80;112
+msgid "Invalid area"
+msgstr "área inválida"
+
+#: Controller/AreasController.php:60;84
+msgid "The area has been saved"
+msgstr "La zona se ha guardado"
+
+#: Controller/AreasController.php:63;87
+msgid "The area could not be saved. Please, try again."
+msgstr "El área no se pudo guardar. Por favor, vuelva a intentarlo."
+
+#: Controller/AreasController.php:115
+msgid "Area deleted"
+msgstr "área eliminada"
+
+#: Controller/AreasController.php:118
+msgid "Area was not deleted"
+msgstr "Área no se ha eliminado"
+
+#: Controller/AttractionsController.php:44;82;115
+msgid "Invalid attraction"
+msgstr "atracción válida"
+
+#: Controller/AttractionsController.php:60;86
+msgid "The attraction has been saved"
+msgstr "La atracción se ha guardado"
+
+#: Controller/AttractionsController.php:63;89
+msgid "The attraction could not be saved. Please, try again."
+msgstr "La atracción no podía ser salvado. Por favor, vuelva a intentarlo."
+
+#: Controller/AttractionsController.php:118
+msgid "Attraction deleted"
+msgstr "borrado de atracción"
+
+#: Controller/AttractionsController.php:121
+msgid "Attraction was not deleted"
+msgstr "Atracción no se ha eliminado"
+
+#: Controller/AttractionsTypesController.php:37;73;105
+msgid "Invalid attractions type"
+msgstr "Tipo de Atracción no válidos"
+
+#: Controller/AttractionsTypesController.php:52;77
+msgid "The attractions type has been saved"
+msgstr "El tipo de atracción se ha guardado"
+
+#: Controller/AttractionsTypesController.php:55;80
+msgid "The attractions type could not be saved. Please, try again."
+msgstr "El tipo de interés no se pudo guardar. Por favor, vuelva a intentarlo."
+
+#: Controller/AttractionsTypesController.php:108
+msgid "Attractions type deleted"
+msgstr "Atracciones tipo borrados"
+
+#: Controller/AttractionsTypesController.php:111
+msgid "Attractions type was not deleted"
+msgstr "Tipo de Atracciones no se ha eliminado"
+
+#: Controller/ParksController.php:45;81;112
+msgid "Invalid park"
+msgstr "parque inválida"
+
+#: Controller/ParksController.php:61;85
+msgid "The park has been saved"
+msgstr "El parque se ha guardado"
+
+#: Controller/ParksController.php:64;88
+msgid "The park could not be saved. Please, try again."
+msgstr "El parque no se pudo guardar. Por favor, vuelva a intentarlo."
+
+#: Controller/ParksController.php:115
+msgid "Park deleted"
+msgstr "Parque eliminada"
+
+#: Controller/ParksController.php:118
+msgid "Park was not deleted"
+msgstr "Park no se ha eliminado"
+
+#: Controller/TypesController.php:43;78;109
+msgid "Invalid type"
+msgstr "tipo no válido"
+
+#: Controller/TypesController.php:58;82
+msgid "The type has been saved"
+msgstr "El tipo se ha guardado"
+
+#: Controller/TypesController.php:61;85
+msgid "The type could not be saved. Please, try again."
+msgstr "El tipo no podía ser salvado. Por favor, vuelva a intentarlo."
+
+#: Controller/TypesController.php:112
+msgid "Type deleted"
+msgstr "Tipo eliminada"
+
+#: Controller/TypesController.php:115
+msgid "Type was not deleted"
+msgstr "Tipo no se ha eliminado"
+
+#: Controller/UsersController.php:31
+msgid "Nom d'user ou mot de passe invalide, réessayer"
+msgstr "Nombre de usuario o contraseña par, inténtalo de nuevo"
+
+#: Controller/UsersController.php:60;93;122
+msgid "Invalid user"
+msgstr "Usuario invalido"
+
+#: Controller/UsersController.php:75;97
+msgid "The user has been saved"
+msgstr "El usuario ha sido guardado"
+
+#: Controller/UsersController.php:78;100
+msgid "The user could not be saved. Please, try again."
+msgstr "El usuario no se ha podido guardar. Por favor, vuelva a intentarlo."
+
+#: Controller/UsersController.php:125
+msgid "User deleted"
+msgstr "Usuario eliminado"
+
+#: Controller/UsersController.php:128
+msgid "User was not deleted"
+msgstr "El usuario no se ha eliminado"
+
+#: Plugin/I18n/Controller/TranslationsController.php:146
+msgid "The translation has been saved"
+msgstr ""
+
+#: Plugin/I18n/Controller/TranslationsController.php:167;190
+msgid "Translation saved"
+msgstr ""
+
+#: Plugin/I18n/Controller/TranslationsController.php:210
+msgid "Translation deleted"
+msgstr ""
+
+#: Plugin/I18n/Model/Translation.php:112
+msgid "Could not save the translation, please check your inputs."
+msgstr ""
+
+#: Plugin/I18n/Model/Translation.php:134;171;215;237
+msgid "Invalid Translation"
+msgstr ""
+
+#: Plugin/I18n/Model/Translation.php:255
+msgid "You need to confirm to delete this Translation"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_add.ctp:4
+msgid "Admin Add Translation"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_add.ctp:17
+#: Plugin/I18n/View/Translations/admin_edit.ctp:19
+#: Plugin/I18n/View/Translations/admin_edit_multi.ctp:26
+#: Plugin/I18n/View/Translations/admin_view.ctp:40
+msgid "List Translations"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_delete.ctp:1
+msgid "Delete Translation \"%s\"?"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_delete.ctp:3
+msgid ""
+"Be aware that your Translation and all associated data will be deleted if "
+"you confirm!"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_delete.ctp:11
+msgid "Confirm"
+msgstr "confirmar"
+
+#: Plugin/I18n/View/Translations/admin_delete.ctp:13
+msgid "You have to confirm."
+msgstr "Usted tiene que confirmar."
+
+#: Plugin/I18n/View/Translations/admin_delete.ctp:14
+msgid "Continue"
+msgstr "Continuar"
+
+#: Plugin/I18n/View/Translations/admin_edit.ctp:4
+#: Plugin/I18n/View/Translations/admin_edit_multi.ctp:4
+msgid "Admin Edit Translation"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_edit.ctp:18
+#: Plugin/I18n/View/Translations/admin_index.ctp:70 View/Areas/index.ctp:46
+#: View/Areas/view.ctp:85 View/Attractions/index.ctp:48
+#: View/Attractions/view.ctp:80 View/AttractionsTypes/edit.ctp:9
+#: View/AttractionsTypes/index.ctp:49 View/Parks/index.ctp:50
+#: View/Parks/view.ctp:86 View/Types/index.ctp:38 View/Types/view.ctp:73
+#: View/Users/index.ctp:48 View/Users/view.ctp:98
+msgid "Delete"
+msgstr "borrar"
+
+#: Plugin/I18n/View/Translations/admin_edit_multi.ctp:22
+msgid "Submit"
+msgstr "Enviar"
+
+#: Plugin/I18n/View/Translations/admin_index.ctp:2
+msgid "Translations"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_index.ctp:6 View/Areas/index.ctp:59
+#: View/Attractions/index.ctp:61 View/AttractionsTypes/index.ctp:60
+#: View/Parks/index.ctp:62 View/Types/index.ctp:50 View/Users/index.ctp:60
+msgid ""
+"Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
+"starting on record {:start}, ending on {:end}"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_index.ctp:17
+msgid "Locale Name"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_index.ctp:20
+msgid "Model Name"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_index.ctp:23
+#: Plugin/I18n/View/Translations/admin_view.ctp:24
+msgid "Field"
+msgstr "El campo"
+
+#: Plugin/I18n/View/Translations/admin_index.ctp:26
+#: Plugin/I18n/View/Translations/admin_view.ctp:29
+msgid "Content"
+msgstr "contenido"
+
+#: Plugin/I18n/View/Translations/admin_index.ctp:28
+msgid "Search"
+msgstr "Buscar"
+
+#: Plugin/I18n/View/Translations/admin_index.ctp:40 View/Areas/index.ctp:29
+#: View/Areas/view.ctp:68 View/Attractions/index.ctp:30
+#: View/Attractions/view.ctp:67 View/AttractionsTypes/index.ctp:33
+#: View/Parks/index.ctp:30 View/Parks/view.ctp:70 View/Types/index.ctp:26
+#: View/Types/view.ctp:56 View/Users/index.ctp:31 View/Users/view.ctp:81
+msgid "Actions"
+msgstr "acciones"
+
+#: Plugin/I18n/View/Translations/admin_index.ctp:67 View/Areas/index.ctp:43
+#: View/Areas/view.ctp:83 View/Attractions/index.ctp:45
+#: View/Attractions/view.ctp:78 View/AttractionsTypes/index.ctp:47
+#: View/Parks/index.ctp:45 View/Parks/view.ctp:84 View/Types/index.ctp:35
+#: View/Types/view.ctp:71 View/Users/index.ctp:45 View/Users/view.ctp:96
+msgid "View"
+msgstr "Ver"
+
+#: Plugin/I18n/View/Translations/admin_index.ctp:68 View/Areas/index.ctp:45
+#: View/Areas/view.ctp:84 View/Attractions/index.ctp:47
+#: View/Attractions/view.ctp:79 View/AttractionsTypes/index.ctp:48
+#: View/Parks/index.ctp:49 View/Parks/view.ctp:85 View/Types/index.ctp:37
+#: View/Types/view.ctp:72 View/Users/index.ctp:47 View/Users/view.ctp:97
+msgid "Edit"
+msgstr "Editar"
+
+#: Plugin/I18n/View/Translations/admin_index.ctp:69
+msgid "Edit All locales for this entry"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_index.ctp:80
+#: Plugin/I18n/View/Translations/admin_view.ctp:41
+msgid "New Translation"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_view.ctp:2
+msgid "Translation"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_view.ctp:4 View/Areas/view.ctp:62
+#: View/Attractions/view.ctp:65 View/AttractionsTypes/view.ctp:33
+#: View/Parks/view.ctp:65 View/Types/view.ctp:23;50 View/Users/view.ctp:23;75
+msgid "Id"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_view.ctp:9
+msgid "Locale"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_view.ctp:14
+msgid "Model"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_view.ctp:19
+msgid "Foreign Key"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_view.ctp:38
+msgid "Edit Translation"
+msgstr ""
+
+#: Plugin/I18n/View/Translations/admin_view.ctp:39
+msgid "Delete Translation"
+msgstr ""
+
+#: View/Areas/add.ctp:16
+msgid "Add Area"
+msgstr "Añadir Area"
+
+#: View/Areas/edit.ctp:16
+msgid "Edit Area"
+msgstr "Área de edición"
+
+#: View/Areas/index.ctp:18
+msgid "Areas"
+msgstr "áreas"
+
+#: View/Areas/index.ctp:46 View/Areas/view.ctp:85 View/Attractions/index.ctp:48
+#: View/Attractions/view.ctp:80 View/AttractionsTypes/edit.ctp:9
+#: View/AttractionsTypes/index.ctp:49 View/AttractionsTypes/view.ctp:10
+#: View/Parks/index.ctp:50 View/Parks/view.ctp:86 View/Types/index.ctp:38
+#: View/Types/view.ctp:73 View/Users/index.ctp:48 View/Users/view.ctp:98
+msgid "Are you sure you want to delete # %s?"
+msgstr "estas seguro que quieres borrarlo"
+
+#: View/Areas/index.ctp:66 View/Attractions/index.ctp:68
+#: View/AttractionsTypes/index.ctp:67 View/Parks/index.ctp:69
+#: View/Types/index.ctp:57 View/Users/index.ctp:67
+msgid "Previous"
+msgstr "previo"
+
+#: View/Areas/index.ctp:68 View/Attractions/index.ctp:70
+#: View/AttractionsTypes/index.ctp:69 View/Parks/index.ctp:71
+#: View/Types/index.ctp:59 View/Users/index.ctp:69
+msgid "Next"
+msgstr "Siguiente"
+
+#: View/Areas/view.ctp:20 View/Attractions/view.ctp:38
+msgid "Area"
+msgstr "área"
+
+#: View/Areas/view.ctp:25 View/Parks/view.ctp:66
+msgid "Area Name"
+msgstr "Nombre"
+
+#: View/Areas/view.ctp:30 View/Parks/view.ctp:67
+msgid "Area Description"
+msgstr "Descripción"
+
+#: View/Areas/view.ctp:35 View/Parks/view.ctp:18
+msgid "Park"
+msgstr "Parque"
+
+#: View/Areas/view.ctp:40;67 View/Attractions/view.ctp:43
+#: View/Parks/view.ctp:69 View/Types/view.ctp:55 View/Users/view.ctp:76
+msgid "User Id"
+msgstr "Usuario"
+
+#: View/Areas/view.ctp:54 View/Types/view.ctp:42
+msgid "Related Attractions"
+msgstr "Lugares relacionados"
+
+#: View/Areas/view.ctp:63 View/Attractions/view.ctp:23 View/Types/view.ctp:51
+msgid "Attraction Name"
+msgstr "Nombre"
+
+#: View/Areas/view.ctp:64 View/Attractions/view.ctp:28 View/Types/view.ctp:52
+msgid "Attraction Description"
+msgstr "Descripción"
+
+#: View/Areas/view.ctp:65 View/Attractions/view.ctp:33 View/Types/view.ctp:53
+msgid "Admission Price"
+msgstr "Admisión Precio"
+
+#: View/Areas/view.ctp:66 View/Types/view.ctp:54
+msgid "Area Id"
+msgstr "id"
+
+#: View/Areas/view.ctp:97 View/AttractionsTypes/add.ctp:11
+#: View/AttractionsTypes/edit.ctp:12 View/AttractionsTypes/index.ctp:11
+#: View/AttractionsTypes/view.ctp:14
+#: View/Themed/Cakestrap/Elements/menu/side_menu.ctp:30 View/Types/view.ctp:85
+msgid "New Attraction"
+msgstr "Nueva atracción"
+
+#: View/Attractions/add.ctp:16
+msgid "Add Attraction"
+msgstr "Añadir atracción"
+
+#: View/Attractions/edit.ctp:16
+msgid "Edit Attraction"
+msgstr "Editar atracción"
+
+#: View/Attractions/index.ctp:18
+msgid "Attractions"
+msgstr "atracciones"
+
+#: View/Attractions/view.ctp:18 View/AttractionsTypes/view.ctp:38
+msgid "Attraction"
+msgstr "atraccione"
+
+#: View/Attractions/view.ctp:57
+msgid "Related Types"
+msgstr "Tipos relacionados"
+
+#: View/Attractions/view.ctp:66 View/Types/view.ctp:28
+msgid "Type Description"
+msgstr "Descripción"
+
+#: View/Attractions/view.ctp:92 View/AttractionsTypes/add.ctp:13
+#: View/AttractionsTypes/edit.ctp:14 View/AttractionsTypes/index.ctp:13
+#: View/AttractionsTypes/view.ctp:16
+msgid "New Type"
+msgstr "Nuevo tipo"
+
+#: View/AttractionsTypes/add.ctp:9 View/AttractionsTypes/edit.ctp:10
+#: View/AttractionsTypes/view.ctp:11
+msgid "List Attractions Types"
+msgstr ""
+
+#: View/AttractionsTypes/add.ctp:10 View/AttractionsTypes/edit.ctp:11
+#: View/AttractionsTypes/index.ctp:10 View/AttractionsTypes/view.ctp:13
+#: View/Themed/Cakestrap/Elements/menu/side_menu.ctp:28
+msgid "List Attractions"
+msgstr "Lista de Atracciones"
+
+#: View/AttractionsTypes/add.ctp:12 View/AttractionsTypes/edit.ctp:13
+#: View/AttractionsTypes/index.ctp:12 View/AttractionsTypes/view.ctp:15
+#: View/Themed/Cakestrap/Elements/menu/side_menu.ctp:33
+msgid "List Types"
+msgstr "Tipos de listas"
+
+#: View/AttractionsTypes/add.ctp:22
+msgid "Add Attractions Type"
+msgstr ""
+
+#: View/AttractionsTypes/edit.ctp:23 View/AttractionsTypes/view.ctp:9
+msgid "Edit Attractions Type"
+msgstr ""
+
+#: View/AttractionsTypes/index.ctp:9 View/AttractionsTypes/view.ctp:12
+msgid "New Attractions Type"
+msgstr ""
+
+#: View/AttractionsTypes/index.ctp:24
+msgid "Attractions Types"
+msgstr ""
+
+#: View/AttractionsTypes/view.ctp:10
+msgid "Delete Attractions Type"
+msgstr ""
+
+#: View/AttractionsTypes/view.ctp:28
+msgid "Attractions Type"
+msgstr ""
+
+#: View/AttractionsTypes/view.ctp:43 View/Types/view.ctp:18
+msgid "Type"
+msgstr "Tipo"
+
+#: View/Parks/add.ctp:16
+msgid "Add Park"
+msgstr "Añadir Parque"
+
+#: View/Parks/edit.ctp:16
+msgid "Edit Park"
+msgstr "Editar Parque"
+
+#: View/Parks/index.ctp:18
+msgid "Parks"
+msgstr "Parques"
+
+#: View/Parks/view.ctp:23 View/Users/view.ctp:18
+msgid "User"
+msgstr "Usuario"
+
+#: View/Parks/view.ctp:28 View/Users/view.ctp:77
+msgid "Park Name"
+msgstr "Nombre"
+
+#: View/Parks/view.ctp:33 View/Users/view.ctp:78
+msgid "Park Location"
+msgstr "park Ubicación"
+
+#: View/Parks/view.ctp:38 View/Users/view.ctp:79
+msgid "Park Email"
+msgstr "parque email"
+
+#: View/Parks/view.ctp:43 View/Users/view.ctp:80
+msgid "Park Website"
+msgstr "Sitio web"
+
+#: View/Parks/view.ctp:57
+msgid "Related Areas"
+msgstr "Áreas relacionadas"
+
+#: View/Parks/view.ctp:68
+msgid "Park Id"
+msgstr "id"
+
+#: View/Parks/view.ctp:98 View/Themed/Cakestrap/Elements/menu/side_menu.ctp:25
+msgid "New Area"
+msgstr "Nueva Area"
+
+#: View/Themed/Cakestrap/Elements/menu/side_menu.ctp:18
+msgid "List Parks"
+msgstr "Lista de parques"
+
+#: View/Themed/Cakestrap/Elements/menu/side_menu.ctp:20 View/Users/view.ctp:110
+msgid "New Park"
+msgstr "Nuevo Parque"
+
+#: View/Themed/Cakestrap/Elements/menu/side_menu.ctp:23
+msgid "List Areas"
+msgstr "Áreas Lista"
+
+#: View/Themed/Cakestrap/Elements/menu/side_menu.ctp:35
+msgid "New Types"
+msgstr "Novedades"
+
+#: View/Themed/Cakestrap/Elements/menu/side_menu.ctp:38
+msgid "List Users"
+msgstr "Lista de Usuarios"
+
+#: View/Themed/Cakestrap/Elements/menu/side_menu.ctp:40
+msgid "New User"
+msgstr "Nuevo usuario"
+
+#: View/Themed/Cakestrap/Elements/menu/top_menu.ctp:9
+msgid "Theme Parks"
+msgstr "parque de atracciones"
+
+#: View/Themed/Cakestrap/Elements/menu/top_menu.ctp:18
+msgid "Hello "
+msgstr "¡Hola"
+
+#: View/Themed/Cakestrap/Elements/menu/top_menu.ctp:22
+msgid "add user"
+msgstr "Agregar usuario"
+
+#: View/Themed/Cakestrap/Elements/menu/top_menu.ctp:27
+msgid "[Logout]"
+msgstr "cierre de sesión"
+
+#: View/Themed/Cakestrap/Elements/menu/top_menu.ctp:31
+msgid "[Login]"
+msgstr "Iniciar sesión"
+
+#: View/Types/add.ctp:16
+msgid "Add Type"
+msgstr "Añadir Tipo"
+
+#: View/Types/edit.ctp:16
+msgid "Edit Type"
+msgstr "Editar Tipo"
+
+#: View/Types/index.ctp:18
+msgid "Types"
+msgstr "tipos"
+
+#: View/Users/add.ctp:16
+msgid "Add User"
+msgstr "Agregar usuario"
+
+#: View/Users/edit.ctp:16
+msgid "Edit User"
+msgstr "Editar usuario"
+
+#: View/Users/index.ctp:18
+msgid "Users"
+msgstr "Usuarios"
+
+#: View/Users/login.ctp:6
+msgid "Please enter your username and password"
+msgstr "Por favor, introduzca su nombre de usuario y contraseña"
+
+#: View/Users/login.ctp:13
+msgid "Login"
+msgstr "Ingresar"
+
+#: View/Users/view.ctp:28
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: View/Users/view.ctp:33
+msgid "Password"
+msgstr "Contraseña"
+
+#: View/Users/view.ctp:38
+msgid "Role"
+msgstr "Rol"
+
+#: View/Users/view.ctp:43
+msgid "Email"
+msgstr "parque email"
+
+#: View/Users/view.ctp:48
+msgid "Created"
+msgstr "creado"
+
+#: View/Users/view.ctp:53
+msgid "Modified"
+msgstr "Modificado"
+
+#: View/Users/view.ctp:67
+msgid "Related Parks"
+msgstr "Parques Relacionados"
+
+#: Model/Area.php:validation for field area_name;validation area_description
+#: Model/Attraction.php:validation attraction_name Model/Park.php:validation
+#: park_name;validation park_location;validation park_email;validation
+#: park_website Model/Type.php:validation type_description
+#: Model/User.php:validation username;validation password;validation role
+msgid "notBlank"
+msgstr ""
+
+#: Model/Area.php:validation for field park_id;validation user_id
+#: Model/Attraction.php:validation area_id;validation
+#: Model/AttractionsType.php:validation attraction_id;validation type_id
+#: Model/Park.php:validation
+msgid "numeric"
+msgstr ""
+
+#: Model/User.php:validation for field email
+msgid "email"
+msgstr "parque email"
+
+#: Plugin/I18n/Model/Translation.php:validation for field locale
+msgid "Please enter a Locale"
+msgstr ""
+
+#: Plugin/I18n/Model/Translation.php:validation for field model
+msgid "Please enter a Model"
+msgstr ""
+
+#: Plugin/I18n/Model/Translation.php:validation for field foreign_key
+msgid "Please enter a Foreign Key"
+msgstr ""
+
+#: Plugin/I18n/Model/Translation.php:validation for field
+msgid "Please enter a Field"
+msgstr ""
+
+#~ msgid "New Parks"
+#~ msgstr "Nuevos Parques"
