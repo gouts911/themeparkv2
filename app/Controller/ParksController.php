@@ -8,6 +8,7 @@ App::uses('AppController', 'Controller');
  */
 class ParksController extends AppController {
 
+    public $helpers = array('Js');
 /**
  * Components
  *
@@ -64,8 +65,11 @@ class ParksController extends AppController {
 				$this->Session->setFlash(__('The park could not be saved. Please, try again.'), 'flash/error');
 			}
 		}
+                $countries = $this ->Park->State->Country->find('list');
+                
+                $states = array('choisir etat/province');
 		$users = $this->Park->User->find('list');
-		$this->set(compact('users'));
+		$this->set(compact('users','countries','states'));
 	}
 
 /**
@@ -92,7 +96,8 @@ class ParksController extends AppController {
 			$this->request->data = $this->Park->find('first', $options);
 		}
 		$users = $this->Park->User->find('list');
-		$this->set(compact('users'));
+                $states = $this->Park->State->find('list');
+		$this->set(compact('users','states'));
 	}
 
 /**

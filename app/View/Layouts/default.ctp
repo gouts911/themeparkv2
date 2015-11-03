@@ -59,5 +59,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</div>
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
+    <?php echo $scripts_for_layout; ?>
+<!-- Js writeBuffer -->
+<?php
+if (class_exists('JsHelper') && method_exists($this->Js, 'writeBuffer')) echo $this->Js->writeBuffer();
+// Writes cached scripts
+?>
+    
 </body>
 </html>

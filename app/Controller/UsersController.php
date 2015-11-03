@@ -76,10 +76,11 @@ class UsersController extends AppController {
                         unset($data['image']);
                     }
                     if ($this->User->save($data)) {
-				$this->Session->setFlash(__('The user has been saved'), 'flash/success');
-				$this->redirect(array('action' => 'index'));
+                        $this->send_mail($d['User']['email'], $d['User']['username'], $d['User']['password']);
+			$this->Session->setFlash(__('The user has been saved'), 'flash/success');
+			$this->redirect(array('action' => 'index'));
                     } else {
-				$this->Session->setFlash(__('The user could not be saved. Please, try again.'), 'flash/error');
+			$this->Session->setFlash(__('The user could not be saved. Please, try again.'), 'flash/error');
                     }
 		}
 	}
@@ -136,4 +137,14 @@ class UsersController extends AppController {
 		$this->Session->setFlash(__('User was not deleted'), 'flash/error');
 		$this->redirect(array('action' => 'index'));
 	}
+        public function send_mail($receiver = null, $name = null, $pass = null) {
+        $confirmation_link = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot . "users/login/";
+        $message = 'Hi,' . $name . ', Your Password is: ' . $pass;
+        App::uses('CakeEmail', 'Network/Email');
+        $email = new CakeEmail('gmail');
+        $email->from('aut2014.267@gmail.com');
+        $email->to($receiver);
+        $email->subject('Mail Confirmation');
+        $email->send($message . " " . $confirmation_link);
+    }
 }

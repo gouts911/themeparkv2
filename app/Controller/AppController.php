@@ -65,6 +65,10 @@ class AppController extends Controller {
         if ($this->Session->check('Config.language')) {
             Configure::write('Config.language', $this->Session->read('Config.language'));
         }
+        if ($this->request->is('Ajax')) {
+            $this->layout = false;
+        }
+        parent::beforeFilter();
     }
 
     public function isAuthorized($user) {
