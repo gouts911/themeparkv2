@@ -71,7 +71,7 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'http://themeparkv2-xavfrank.rhcloud.com',
+		'host' => '',
 		'login' => '',
 		'password' => '',
 		'database' => '',
