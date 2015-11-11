@@ -31,7 +31,14 @@
 						<?php echo $this->Form->input('park_name', array('class' => 'form-control')); ?>
 					</div><!-- .form-group -->
 					<div class="form-group">
-						<?php echo $this->Form->input('park_location', array('class' => 'form-control')); ?>
+						
+                                                   <?php echo $this->Form->input('country_id');?>
+                                                
+					</div><!-- .form-group -->
+                                        <div class="form-group">
+                                            
+                                                   <?php echo $this->Form->input('state_id');?>
+                                                
 					</div><!-- .form-group -->
 					<div class="form-group">
 						<?php echo $this->Form->input('park_email', array('class' => 'form-control')); ?>
@@ -51,3 +58,20 @@
 	</div><!-- /#page-content .col-sm-9 -->
 
 </div><!-- /#page-container .row-fluid -->
+<?php //// Peut-etre un probleme ici !!!!!!!!!!!!!!!
+$this->Js->get('#ParkCountryId')->event('click', 
+$this->Js->request(array(
+'controller'=>'states',
+'action'=>'getByCategory'
+), array(
+'update'=>'#ParkStateId',
+'async' => true,
+'method' => 'post',
+'dataExpression'=>true,
+'data'=> $this->Js->serializeForm(array(
+'isForm' => true,
+'inline' => true
+))
+))
+);
+?>

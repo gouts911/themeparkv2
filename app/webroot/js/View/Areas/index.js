@@ -1,6 +1,6 @@
 (function($) {
   $('#autocomplete').autocomplete({
-        source: "cars/index.json"
+        source: "index.json"
   });
 })(jQuery);
 

@@ -25,19 +25,48 @@ class UsersController extends AppController {
 
     public function login() {
         if ($this->request->is('post')) {
-            if ($this->Auth->login()) {
+            if ($this->Auth->login()) { 
+                
                 return $this->redirect($this->Auth->redirectUrl());
             } else {
                 $this->Session->setFlash(__("Nom d'user ou mot de passe invalide, réessayer"));
             }
         }
-    }
+    } 
 
     public function logout() {
         return $this->redirect($this->Auth->logout());
     }
+    
+    public function confirm(){
+        
+        if ($this->request->is('post')) {
+                if ($this->Auth->login()) {
+                    $id = $this->Auth->User('id');
+                    
+                    $this->User->id = $id;
+                    $user = $this->User->find('first',array(
+                       'conditions' =>array('id'=> $id) 
+                    ));
+                    
+                    $user['User']['actif'] = true;
+                    
+                    if ($this->User->save($user)) {
+                        $this->Session->setFlash(__('The user has been confirmed'), 'flash/success');
+                        return $this->redirect($this->Auth->redirectUrl());
+        
+                    }
+                    
+                } else {
+                    $this->Session->setFlash(__("Nom d'user ou mot de passe invalide, réessayer"));
+                }
+        }
+    }
 	public $components = array('Paginator');
-
+    public function about(){
+         
+        
+    }
 /**
  * index method
  *
@@ -76,7 +105,7 @@ class UsersController extends AppController {
                         unset($data['image']);
                     }
                     if ($this->User->save($data)) {
-                        $this->send_mail($d['User']['email'], $d['User']['username'], $d['User']['password']);
+                        $this->send_mail($data['email'], $data['username'], $data['password']);
 			$this->Session->setFlash(__('The user has been saved'), 'flash/success');
 			$this->redirect(array('action' => 'index'));
                     } else {
@@ -138,13 +167,13 @@ class UsersController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
         public function send_mail($receiver = null, $name = null, $pass = null) {
-        $confirmation_link = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot . "users/login/";
-        $message = 'Hi,' . $name . ', Your Password is: ' . $pass;
-        App::uses('CakeEmail', 'Network/Email');
-        $email = new CakeEmail('gmail');
-        $email->from('aut2014.267@gmail.com');
-        $email->to($receiver);
-        $email->subject('Mail Confirmation');
-        $email->send($message . " " . $confirmation_link);
+            $confirmation_link = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot . "users/confirm/";
+            $message = 'Hi,' . $name . ', Your Password is: ' . $pass;
+            App::uses('CakeEmail', 'Network/Email');
+            $email = new CakeEmail('gmail');
+            $email->from('fgauthier1985@gmail.com');
+            $email->to($receiver);
+            $email->subject('Mail Confirmation');
+            $email->send($message . " " . $confirmation_link);
     }
 }

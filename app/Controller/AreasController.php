@@ -13,7 +13,9 @@ class AreasController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator');
+        
+    
+	public $components = array('Paginator','RequestHandler');
         public function beforeFilter() {
         parent::beforeFilter();
         // Permet aux utilisateurs de s'enregistrer et de se déconnecter
@@ -28,8 +30,18 @@ class AreasController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->Area->recursive = 0;
+	if ($this->request->is('ajax')) {
+            
+                            $term = $this->request->query('term');
+                            $listareas = $this->Area->getAreaNames($term);
+                            
+                            $this->set(compact('listareas'));
+                            $this->set('_serialize', 'listareas');
+                }	
+            
+            $this->Area->recursive = 0;
 		$this->set('areas', $this->paginate());
+                
 	}
 
 /**
@@ -53,9 +65,13 @@ class AreasController extends AppController {
  * @return void
  */
 	public function add() {
+           
+                
 		if ($this->request->is('post')) {
+                    
 			$this->Area->create();
                         $this->request->data['Area']['user_id'] = $this->Auth->user('id');
+                        
 			if ($this->Area->save($this->request->data)) {
 				$this->Session->setFlash(__('The area has been saved'), 'flash/success');
 				$this->redirect(array('action' => 'index'));

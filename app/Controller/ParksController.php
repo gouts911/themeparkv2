@@ -96,8 +96,10 @@ class ParksController extends AppController {
 			$this->request->data = $this->Park->find('first', $options);
 		}
 		$users = $this->Park->User->find('list');
-                $states = $this->Park->State->find('list');
-		$this->set(compact('users','states'));
+                $countries = $this ->Park->State->Country->find('list');
+                
+                $states = array('choisir etat/province');
+		$this->set(compact('users','states','countries'));
 	}
 
 /**

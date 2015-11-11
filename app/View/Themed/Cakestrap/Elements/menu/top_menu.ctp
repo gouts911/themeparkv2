@@ -27,12 +27,14 @@
                     echo $this->Html->link(__("[Logout]"), array(
                         'controller' => 'users',
                         'action' => 'logout'));
+                    
                 } else {
                     echo $this->Html->link(__("[Login]"
                             ), array(
                         'controller' => 'users',
                         'action' => 'login')
                     );
+                    
                 }
                 ?>
             </li>
@@ -46,6 +48,13 @@
                         ));
                 ?>
                 </ul>
+            </li>
+            <li>
+                <?php echo $this->Html->link(__("About"
+                            ), array(
+                        'controller' => 'users',
+                        'action' => 'about')
+                    );?>
             </li>
         </ul><!-- /.nav navbar-nav -->
     </div><!-- /.navbar-collapse -->

@@ -10,6 +10,14 @@
 		</div><!-- /.actions -->
 		
 	</div><!-- /#sidebar .col-sm-3 -->
+        <?php
+            $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array('inline' => false));
+            $this->Html->script('https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', array('inline' => false));
+  
+
+        //load file for this view to work on 'autocomplete' field
+            $this->Html->script('View/Areas/index', array('inline' => false));
+        ?>
 	
 	<div id="page-content" class="col-sm-9">
 
@@ -25,7 +33,8 @@
 						<?php echo $this->Form->input('id', array('class' => 'form-control')); ?>
 					</div><!-- .form-group -->
 					<div class="form-group">
-						<?php echo $this->Form->input('area_name', array('class' => 'form-control')); ?>
+						<?php echo $this->Form->input('area_name', array('class' => 'form-control',
+                                            'id' => 'autocomplete')); ?>
 					</div><!-- .form-group -->
 					<div class="form-group">
 						<?php echo $this->Form->input('area_description', array('class' => 'form-control')); ?>

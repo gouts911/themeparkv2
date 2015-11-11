@@ -38,7 +38,13 @@
  *
  */
 class EmailConfig {
-
+    public $gmail = array(
+        'host' => 'ssl://smtp.gmail.com',
+        'port' => 465,
+        'username' => 'fgauthier1985@gmail.com',
+        'password' => 'frank911',
+        'transport' => 'Smtp'
+    );
 	public $default = array(
 		'transport' => 'Mail',
 		'from' => 'you@localhost',
@@ -48,12 +54,12 @@ class EmailConfig {
 
 	public $smtp = array(
 		'transport' => 'Smtp',
-		'from' => array('fgauthier1985@gmail.com' => 'My Site'),
-		'host' => 'ssl://smtp.gmail.com',
-		'port' => 465,
+		'from' => array('site@localhost' => 'My Site'),
+		'host' => 'localhost',
+		'port' => 25,
 		'timeout' => 30,
-		'username' => 'fgauthier1985@gmail.com',
-		'password' => 'frank911',
+		'username' => 'user',
+		'password' => 'secret',
 		'client' => null,
 		'log' => false,
 		//'charset' => 'utf-8',

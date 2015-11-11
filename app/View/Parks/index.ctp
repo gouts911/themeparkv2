@@ -24,7 +24,8 @@
 							
 							<th><?php echo $this->Paginator->sort('user_id'); ?></th>
 							<th><?php echo $this->Paginator->sort('park_name'); ?></th>
-							<th><?php echo $this->Paginator->sort('park_location'); ?></th>
+							
+                                                        <th><?php echo $this->Paginator->sort('state_id'); ?></th>
 							<th><?php echo $this->Paginator->sort('park_email'); ?></th>
 							<th><?php echo $this->Paginator->sort('park_website'); ?></th>
 							<th class="actions"><?php echo __('Actions'); ?></th>
@@ -37,7 +38,8 @@
 		<td><?php  if ($this->Session->read('Auth.User.role') == "admin") { 
                 echo h($park['User']['username']); }?>&nbsp;</td>
 		<td><?php echo h($park['Park']['park_name']); ?>&nbsp;</td>
-		<td><?php echo h($park['Park']['park_location']); ?>&nbsp;</td>
+		
+                <td><?php echo h($park['State']['name']); ?>&nbsp;</td>
 		<td><?php echo h($park['Park']['park_email']); ?>&nbsp;</td>
 		<td><?php echo h($park['Park']['park_website']); ?>&nbsp;</td>
 		<td class="actions">
