@@ -30,7 +30,7 @@
 		</td>
 </tr><tr>		<td><strong><?php echo __('Park Location'); ?></strong></td>
 		<td>
-			<?php echo h($park['Park']['park_location']); ?>
+			<?php echo h($park['State']['name']); ?>
 			&nbsp;
 		</td>
 </tr><tr>		<td><strong><?php echo __('Park Email'); ?></strong></td>

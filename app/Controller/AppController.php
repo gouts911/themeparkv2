@@ -61,7 +61,10 @@ class AppController extends Controller {
         
     );
    public function beforeFilter() {
-        $this->Auth->allow('index', 'view', 'display', 'home','confirm'); //ajout de add/////////////////////
+        //$this->Auth->allow('index', 'view', 'display', 'home','confirm'); //ajout de add/////////////////////
+        
+          $this->Auth->allow('index', 'view', 'display', 'home','confirm','about','login');  
+        
         if ($this->Session->check('Config.language')) {
             Configure::write('Config.language', $this->Session->read('Config.language'));
         }
@@ -73,12 +76,16 @@ class AppController extends Controller {
 
     public function isAuthorized($user) {
         // Admin can access every action
-        if (isset($user['role']) && $user['role'] === 'admin') {
+        if (isset($user['role']) && $user['role'] === 'admin' && $user['actif'] === true) {
             return true;
         }
-
+        if(isset($user['actif'])&& $user['actif'] === false){
+            $this->Session->setFlash("Your account must be confirmed",'flash/error');
+            return false;
+        }
         // Default deny
         $this->Session->setFlash("This action is not authorized");
+        
         return false;
     }
 }

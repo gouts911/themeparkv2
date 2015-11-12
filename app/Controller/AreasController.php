@@ -17,9 +17,21 @@ class AreasController extends AppController {
     
 	public $components = array('Paginator','RequestHandler');
         public function beforeFilter() {
+            if($this->Auth->User('id') != null){
+                    $id = $this->Auth->User('id');
+                    
+                   
+                    
+                    $user = $this->Area->User->find('first',array(
+                       'conditions' =>array('id'=> $id) 
+                    ));
+                    if($user['User']['actif'] === true){
+                        $this->Auth->allow('add','edit','delete');
+                    }
+        }
         parent::beforeFilter();
         // Permet aux utilisateurs de s'enregistrer et de se déconnecter
-        if ($this->Session->read('Auth.User.role') == "admin" || $this->Session->read('Auth.User.role') == "proprietaire"){
+        if ($this->Session->read('Auth.User.role') == "admin" || ($this->Session->read('Auth.User.role') == "proprietaire" && $user['User']['actif'] === true )){
             $this->Auth->allow('add', 'delete','edit');
         }
         }
