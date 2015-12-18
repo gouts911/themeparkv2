@@ -62,5 +62,9 @@
     </div><!-- /.navbar-collapse -->
     
 </nav><!-- /.navbar navbar-default -->
-<?php $media = $this->Html->image('Kids_At_Theme_Park_clip_art2.svg', array('width' => '100', 'height' => '100')); ?>
-<a href="/themepark_v2.0.0/Users/about.ctp"><?php echo $media?></a>
+
+<?php echo $this->Html->link($this->Html->image('Kids_At_Theme_Park_clip_art2.svg', array('width' => '100', 'height' => '100')),
+                       array(
+                    'controller' => 'users',
+                    'action' => 'about'),
+                       array('escape' => false , 'class' => 'navbar-brand')); ?>
