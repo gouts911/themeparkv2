@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="themepark_v2.0.0/dist/snap.svg-min.js" type="text/javascript"></script>
+        <script>
+            //Run script right away
+            window.onload = function () {
+//We'll be appending the icon to this DIV later
+                var s = Snap("#iconDiv");
+//Have Snap load the SVG file
+                Snap.load("Theme_Park_clip_art.svg", function (f) {
+//Assign the white rectangle
+                    whiteRect = f.select("#rect3690");
+//Assign the whole icon group
+                    icon = f.select("#group");
+//When the icon is hovered over, have the white rectangle move up slightly with elastic properties
+                    icon.hover(function () {
+                        whiteRect.animate({y: 380}, 500, mina.elastic);
+                    },
+//And return to original position when not hovered over
+                            function () {
+                                whiteRect.animate({y: 406.27359}, 500, mina.elastic);
+                            }
+                    );
+//Finally append the icon to iconDiv in the body
+                    s.append(f);
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <div>Essai de la librairie Snap pour SVG</div>
+        <div id="iconDiv"></div>	
+    </body>
+</html>

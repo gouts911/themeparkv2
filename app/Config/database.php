@@ -66,30 +66,48 @@
  * flags =>
  * A key/value array of driver specific connection options.
  */
+define('DEFAULT_DB', APP.DS.'sqlite'.DS.'themepark.sqlite');
+define('TEST_DB', APP.DS.'sqlite'.DS.'test.sqlite');
 class DATABASE_CONFIG {
 
 	public $default = array(
-		'datasource' => 'Database/Mysql',
+		'datasource' => 'Database/Sqlite',
 		'persistent' => false,
-		'host' => '',
-		'login' => '',
-		'password' => '',
-		'database' => '',
+		'database' => DEFAULT_DB,
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
 
 	public $test = array(
-		'datasource' => 'Database/Mysql',
+		'datasource' => 'Database/Sqlite',
 		'persistent' => false,
-		'host' => '',
-		'login' => '',
-		'password' => '',
-		'database' => '',
+		'database' => TEST_DB,
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
-        public function __construct() {
+    /*public $default = array(
+                'datasource' => 'Database/Mysql',
+                'persistent' => false,
+                'host'       => 'localhost',
+                'port'       => '',
+                'login'      => 'root',
+                'password'   => 'mysql',
+                'database'   => 'themepark',
+                'prefix'     => '',
+                //'encoding' => 'utf8',
+        );
+        public $test = array(
+                'datasource' => 'Database/Mysql',
+                'persistent' => false,
+                'host'       => 'localhost',
+		'port'       => '',
+                'login'      => 'root',
+                'password'   => 'mysql',
+                'database'   => 'testthemepark',
+                'prefix'     => '',
+                //'encoding' => 'utf8',
+        );*/
+       /* public function __construct() {
                if (getenv("OPENSHIFT_MYSQL_DB_HOST")):
 	           $this->default['host']       = getenv("OPENSHIFT_MYSQL_DB_HOST");
 	           $this->default['port']       = getenv("OPENSHIFT_MYSQL_DB_PORT");
@@ -106,5 +124,6 @@ class DATABASE_CONFIG {
 	           $this->default['database']   = 'themepark';
 	           
 	       endif;
-	}
+	}*/
 }
+

@@ -20,21 +20,21 @@ class AreasController extends AppController {
             if($this->Auth->User('id') != null){
                     $id = $this->Auth->User('id');
                     
-                   
-                    
                     $user = $this->Area->User->find('first',array(
                        'conditions' =>array('id'=> $id) 
                     ));
-                    if($user['User']['actif'] === true){
+                   
+                    if($user['User']['actif'] == 1){
                         $this->Auth->allow('add','edit','delete');
                     }
         }
         parent::beforeFilter();
         // Permet aux utilisateurs de s'enregistrer et de se déconnecter
-        if ($this->Session->read('Auth.User.role') == "admin" || ($this->Session->read('Auth.User.role') == "proprietaire" && $user['User']['actif'] === true )){
+        if ($this->Session->read('Auth.User.role') == "admin" || ($this->Session->read('Auth.User.role') == "proprietaire" && $user['User']['actif'] == 1 )){
             $this->Auth->allow('add', 'delete','edit');
         }
         }
+        
 
 /**
  * index method
@@ -44,17 +44,19 @@ class AreasController extends AppController {
 	public function index() {
 	if ($this->request->is('ajax')) {
             
-                            $term = $this->request->query('term');
-                            $listareas = $this->Area->getAreaNames($term);
+            $term = $this->request->query('term');
+            $listareas = $this->Area->getAreaNames($term);
                             
-                            $this->set(compact('listareas'));
-                            $this->set('_serialize', 'listareas');
-                }	
+            $this->set(compact('listareas'));
+            $this->set('_serialize', 'listareas');
+        }	
             
             $this->Area->recursive = 0;
-		$this->set('areas', $this->paginate());
+            $this->set('areas', $this->paginate());
                 
 	}
+        
+        
 
 /**
  * view method
@@ -78,7 +80,7 @@ class AreasController extends AppController {
  */
 	public function add() {
            
-                
+                	
 		if ($this->request->is('post')) {
                     
 			$this->Area->create();
@@ -107,6 +109,7 @@ class AreasController extends AppController {
 		if (!$this->Area->exists($id)) {
 			throw new NotFoundException(__('Invalid area'));
 		}
+                
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Area->save($this->request->data)) {
 				$this->Session->setFlash(__('The area has been saved'), 'flash/success');

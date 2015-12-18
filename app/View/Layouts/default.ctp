@@ -29,7 +29,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('cake.generic');
-echo $this->Html->css('https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css');
+
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
@@ -42,7 +42,7 @@ echo $this->Html->css('https://code.jquery.com/ui/1.10.3/themes/smoothness/jquer
 		</div>
 		<div id="content">
 
-			<?php echo $this->Flash->render(); ?>
+			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
 		</div>
@@ -50,7 +50,7 @@ echo $this->Html->css('https://code.jquery.com/ui/1.10.3/themes/smoothness/jquer
 			<?php echo $this->Html->link(
 					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
 					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
+					array('target' => '_blank', 'escape' => false)
 				);
 			?>
 			<p>

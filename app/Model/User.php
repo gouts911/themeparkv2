@@ -79,17 +79,15 @@ class User extends AppModel {
                 'rule' => array('mimeType', array('image/gif', 'image/png', 'image/jpg', 'image/jpeg')),
                 'message' => 'Invalid file, only images allowed',
                 'allowEmpty' => TRUE,
+                'required' => FALSE,
             ),
-           'filesize' => array(
-                'rule' => array('filesize', '<=', '1MB'),
-                'message' => 'User image must be less then 1MB',
-                'allowEmpty' => TRUE,
-            ),
+           
             // custom callback to deal with the file upload
             'processImageUpload' => array(
                 'rule' => 'processImageUpload',
                 'message' => 'Something went wrong processing your file',
                 'allowEmpty' => TRUE,
+                'required' => FALSE,
             )
         )
     );
@@ -179,5 +177,13 @@ class User extends AppModel {
 
 	return TRUE;
 }
+        
+public function is_uploaded_file($tmp_name) {
+            return is_uploaded_file($tmp_name);
+        }
 
+        public function move_uploaded_file($from, $to) {
+            return move_uploaded_file($from, $to);
+        }
 }
+

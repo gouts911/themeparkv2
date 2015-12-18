@@ -16,7 +16,7 @@
   
 
         //load file for this view to work on 'autocomplete' field
-            $this->Html->script('View/Areas/index', array('inline' => false));
+            $this->Html->script('View/Areas/edit', array('inline' => false));
         ?>
 	
 	<div id="page-content" class="col-sm-9">

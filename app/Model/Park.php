@@ -117,5 +117,8 @@ class Park extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+        public function isOwnedBy($park, $user) {
+            return $this->field('id', array('id' => $park, 'user_id' => $user)) !== false;
+    }
 
 }

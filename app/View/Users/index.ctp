@@ -34,13 +34,17 @@
 					<tbody>
 <?php foreach ($users as $user): ?>
 	<tr>
+            
 		
 		<td><?php echo h($user['User']['username']); ?>&nbsp;</td>
 		
 		<td><?php echo h($user['User']['role']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['email']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['created']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['modified']); ?>&nbsp;</td>
+                <td> <?php $created = $user['User']['created'];
+echo is_numeric($created) ? date("Y-m-d ", $created) : h($created); ?></td>
+		
+		<td> <?php $modified = $user['User']['modified'];
+echo is_numeric($modified) ? date("Y-m-d ", $modified) : h($modified); ?></td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id']), array('class' => 'btn btn-default btn-xs')); ?>
 			<?php if( $this->Session->read('Auth.User.role') == "admin"){

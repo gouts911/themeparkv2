@@ -59,9 +59,9 @@ if (!defined('APP_DIR')) {
  * Leaving this constant undefined will result in it being defined in Cake/bootstrap.php
  *
  * The following line differs from its sibling
- * /lib/Cake/Console/Templates/skel/webroot/index.php
+ * /app/webroot/index.php
  */
-//define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'lib');
+//define('CAKE_CORE_INCLUDE_PATH', 'E:' . DS . 'UniServerZ' . DS . 'www' . DS . 'themepark_v2.0.0' . DS . 'lib');
 
 /**
  * This auto-detects CakePHP as a composer installed library.
@@ -86,7 +86,7 @@ if (!defined('WWW_ROOT')) {
 }
 
 // for built-in server
-if (php_sapi_name() === 'cli-server') {
+if (PHP_SAPI === 'cli-server') {
 	if ($_SERVER['REQUEST_URI'] !== '/' && file_exists(WWW_ROOT . $_SERVER['PHP_SELF'])) {
 		return false;
 	}

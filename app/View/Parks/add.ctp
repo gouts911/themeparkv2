@@ -60,7 +60,7 @@
 $this->Js->get('#ParkCountryId')->event('click', 
 $this->Js->request(array(
 'controller'=>'states',
-'action'=>'getByCategory'
+'action'=>'getByCountry'
 ), array(
 'update'=>'#ParkStateId',
 'async' => true,
