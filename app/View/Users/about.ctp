@@ -36,7 +36,9 @@
                             <img src="http://www.databaseanswers.org/data_models/theme_park_and_visitor_activity/images/data_model.gif">
                             <!--<script src="dist/snap.svg.js" type="text/javascript"></script>-->
                             <!--<img src ="Theme_Park_clip_art.svg"/>-->
-                            <object data="/themepark_v2.0.0/app/webroot/img/Kids_At_Theme_Park_clip_art2.svg" type="image/svg+xml" id="themepark" width="400px" height="400px"></object>
+                            <!--<object data="/themepark_v2.0.0/app/webroot/img/Kids_At_Theme_Park_clip_art2.svg" type="image/svg+xml" id="themepark" width="400px" height="400px"></object> -->
+                            
+                            <?php echo $this->Html->image('Kids_At_Theme_Park_clip_art2.svg', array('escape' => false, 'width' => '400', 'height' => '400')); ?>
     <script>            
         
        
