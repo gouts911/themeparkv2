@@ -140,7 +140,9 @@ class UserTest extends CakeTestCase {
 		$data = array('User' => array(
 			'username' => 'James Fairhurst',
 			'email' => 'info@jamesfairhurst.co',
-			
+			'password' => 'sasasas',
+                    'actif' => 1,
+			'role' => 'admin',
 			'filename' => array(
 				'name' => 'TestFile.jpg',
 				'type' => 'image/jpg',

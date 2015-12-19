@@ -16,7 +16,7 @@ class UserFixture extends CakeTestFixture {
 		'actif' => array('type' => 'boolean', 'null' => false, 'default' => '0'),
 		'role' => array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'charset' => 'utf8'),
 		'email' => array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'charset' => 'utf8'),
-		'image' =>  array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'charset' => 'utf8'),
+		'image' =>  array('type' => 'string', 'null' => true, 'default' => null, 'collate' => 'utf8_unicode_ci', 'charset' => 'utf8'),
 		'created' => array('type' => 'date', 'null' => false, 'default' => null),
 		'modified' => array('type' => 'date', 'null' => false, 'default' => null),
 		'indexes' => array(
